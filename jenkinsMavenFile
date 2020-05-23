@@ -12,7 +12,7 @@ pipeline {
 		}
 		stage('Etapa 1') {
             steps {
-cmd mvn -f simple validate
+cmd_exec(mvn -f simple validate)
             }
         }
         stage('Etapa 2') {
