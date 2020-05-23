@@ -1,0 +1,48 @@
+pipeline {
+	agent any
+    environment {
+		VARIABLE_X='Variable Ejemplo SCM Usb cali'
+		PROJECT_NAME='SCM_CALI - Basico'
+    }
+    stages {
+		stage('Etapa 0') {
+			steps {
+				echo "Proyecto ${PROJECT_NAME}"
+			}
+		}
+		stage('Etapa 1') {
+            steps {
+                echo "Paso 1"
+            }
+        }
+        stage('Etapa 2') {
+            steps {
+                echo "Paso 2"
+            }
+        }
+        stage('Etapa 3') {
+            steps {
+                echo "Paso 3"
+            }
+        }
+    }
+	post {
+		always {
+            echo "Finalizo: ${currentBuild.currentResult}"
+        }
+        aborted {
+            echo "BUILD ABORTED"
+        }
+        success {
+            echo "BUILD SUCCESS"
+            echo "Seria bueno mantener esta construccion"
+        }
+        unstable {
+            echo "BUILD UNSTABLE"
+        }
+        failure {
+            echo "BUILD FAILURE"
+			echo "Revisar Fallos"
+        }
+	}
+}
