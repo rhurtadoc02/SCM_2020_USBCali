@@ -17,12 +17,12 @@ bat 'mvn -f simple validate'
         }
         stage('Etapa 2') {
             steps {
-                echo "Paso 2"
+               bat 'mvn -f simple install'
             }
         }
         stage('Etapa 3') {
             steps {
-                echo "Paso 3"
+                bat 'mvn -f simple package'
             }
         }
     }
