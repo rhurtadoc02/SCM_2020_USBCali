@@ -1,2 +1,1 @@
-e3a65aa2ece6c6b4e569fb4896754d1d0e85b0fe75701a05efeb651ee8fcc6c4
-ejercicios con git 
+modifica y se adiciona en rama 
