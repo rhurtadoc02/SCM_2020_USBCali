@@ -14,19 +14,19 @@ pipeline {
 		stage('Etapa 1') {
             steps {
                 echo "Paso 1"
-                mvn -f simple mvn validate
+                mvn -f simple validate
             }
         }
         stage('Etapa 2') {
             steps {
                 echo "Paso 2"
-                mvn -f simple mvn install
+                mvn -f simple install
             }
         }
         stage('Etapa 3') {
             steps {
                 echo "Paso 3"
-                mvn -f simple mvn package
+                mvn -f simple package
             }
         }
     }
