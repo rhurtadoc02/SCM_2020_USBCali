@@ -8,22 +8,21 @@ pipeline {
 		stage('Etapa 0') {
 			steps {
 				echo "Proyecto ${PROJECT_NAME}"
-        cmd mvn
 			}
 		}
 		stage('Etapa 1') {
             steps {
-                mvn -f simple validate
+                echo "Paso 1"
             }
         }
         stage('Etapa 2') {
             steps {
-                mvn -f simple install
+                echo "Paso 2"
             }
         }
         stage('Etapa 3') {
             steps {
-                mvn -f simple package
+                echo "Paso 3"
             }
         }
     }
@@ -36,7 +35,7 @@ pipeline {
         }
         success {
             echo "BUILD SUCCESS"
-            echo "Se compilo correctamente"
+            echo "Seria bueno mantener esta construccion"
         }
         unstable {
             echo "BUILD UNSTABLE"
