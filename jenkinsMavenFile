@@ -13,6 +13,7 @@ pipeline {
 		stage('Etapa 1') {
             steps {
                 echo "Paso 1"
+		mvn -f simple validate
             }
         }
         stage('Etapa 2') {
